@@ -90,7 +90,7 @@ class TeaShopTest {
         var tea = new Tea("Green Tea", 180, 85, true);
         cup.addTea(tea);
 
-        Thread.sleep(1000); // Ajout d'une petite pause pour s'assurer que l'infusion n'est pas encore terminée
+        Thread.sleep(1000);
 
         assertThat(cup.isReadyToDrink()).isFalse();
     }
@@ -102,7 +102,7 @@ class TeaShopTest {
         var tea = new Tea("Green Tea", 2, 85, true);
         cup.addTea(tea);
 
-        Thread.sleep(3000); // Attente pour dépasser le temps d'infusion
+        Thread.sleep(3000);
 
         assertThat(cup.isReadyToDrink()).isTrue();
     }
